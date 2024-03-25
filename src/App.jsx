@@ -33,6 +33,7 @@ import Oreocheese from "./Components/Cakes/Oreocheese";
 import Mini from "./Components/Cakes/Mini";
 import Blueberry from "./Components/Cakes/Blueberry";
 import Kitkat from "./Components/Cakes/Kitkat";
+import Weaccept from "./Components/Weaccept";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/Trendingcake" element={<Trendingcake />} />
           <Route path="/Review" element={<Review />} />
           <Route path="/Joinus" element={<Joinus />} />
+          <Route path="/Weaccept" element={<Weaccept />}/>
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Cakes" element={<Cakes />} />
           <Route path="/About" element={<About />} />

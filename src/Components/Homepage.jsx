@@ -5,6 +5,7 @@ import Bestcakes from './Bestcakes'
 import Trendingcake from './Trendingcake'
 import Review from './Review'
 import Joinus from './Joinus'
+import Weaccept from './Weaccept'
 const Homepage = () => {
   return (
     <>
@@ -30,6 +31,10 @@ const Homepage = () => {
 
    <section>
      <Joinus/>
+   </section>
+
+   <section>
+    <Weaccept/>
    </section>
    
     </>
