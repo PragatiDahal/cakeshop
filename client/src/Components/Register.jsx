@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 const Register = () => {
     const [fullname, setFullname] = useState('');
@@ -9,10 +10,12 @@ const Register = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Fullname, fullname');
-    console.log('Email:', email);
-    console.log('Password:', password);
-    
+    // console.log('Fullname:', fullname);
+    // console.log('Email:', email);
+    // console.log('Password:', password);
+    axios.post('http://localhost:3001/register',{fullname, email, password})
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
   };
   
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import {Link} from "react-router-dom"
 
 const Joinus = () => {
     useEffect(() => {
@@ -25,9 +26,11 @@ const Joinus = () => {
     <input type="text" className="flex items-center w-[450px] h-[45px] bg-white border-2 border-[#733D26] rounded-xl mx-5 px-4" placeholder="Enter your email here">
         
     </input>
+    <Link to="/Login">
     <button className="bg-[#733D26] hover:bg-red-800 w-[150px] h-[45px] rounded-xl text-white text-base font-bold font-poppins py-5 md:py-2">
     Join US
     </button>
+    </Link>
  </div>
    </>
   )

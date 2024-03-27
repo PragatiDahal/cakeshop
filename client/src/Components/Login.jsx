@@ -1,35 +1,42 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
-  let isloading = true;
-  let API="https://hn.algolia.com/api/v1/search?query=json ";
+  // let isloading = true;
+  // let API="https://hn.algolia.com/api/v1/search?query=json ";
 
-  const fetchApiData = async (url) => {
-    try {
-      const res =  await fetch(url);
-      const data =  await res.json();
-      console.log(data);
-      // isloading = false;
-    } catch (error) {
-      console.log(error);
-    }
+  // const fetchApiData = async (url) => {
+  //   try {
+  //     const res =  await fetch(url);
+  //     const data =  await res.json();
+  //     console.log(data);
+  //     // isloading = false;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
 
-  }
+  // }
 
-  useEffect(() =>{
-    fetchApiData(API)
-  }
-  );
+  // useEffect(() =>{
+  //   fetchApiData(API)
+  // }
+  // );
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+    axios.post('http://localhost:3001/login',{email , password})
+    .then(result => {
+      console.log(result)
+      if(result.data === "Success") {
+        navigate('/Homepage')
+      }
+    })
   };
   
   return (
