@@ -1,44 +1,43 @@
-import React from 'react'
-import Search from './Search'
-import Main from './Main'
-import Bestcakes from './Bestcakes'
-import Trendingcake from './Trendingcake'
-import Review from './Review'
-import Joinus from './Joinus'
-import Weaccept from './Weaccept'
+import React from "react";
+import Search from "./Search/Search";
+import Main from "./Main";
+import Bestcakes from "./Bestcakes";
+import Trendingcake from "./Trendingcake";
+import Review from "./Review";
+import Joinus from "./Joinus";
+import Weaccept from "./Weaccept";
 const Homepage = () => {
   return (
     <>
-   <section>
-     <Search/>
-   </section>
-     
-   <section>
-     <Main/>
-   </section>
+      <section>
+        <Search />
+      </section>
 
-   <section>
-     <Bestcakes/>
-   </section>
+      <section>
+        <Main />
+      </section>
 
-   <section>
-     <Trendingcake/>
-   </section>
+      <section>
+        <Bestcakes />
+      </section>
 
-   <section>
-     <Review/>
-   </section>
+      <section>
+        <Trendingcake />
+      </section>
 
-   <section>
-     <Joinus/>
-   </section>
+      <section>
+        <Review />
+      </section>
 
-   <section>
-    <Weaccept/>
-   </section>
-   
+      <section>
+        <Joinus />
+      </section>
+
+      <section>
+        <Weaccept />
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

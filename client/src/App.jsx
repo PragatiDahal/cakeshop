@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import Search from "./Components/Search";
+import Search from "./Components/Search/Search";
 import Main from "./Components/Main";
 import Bestcakes from "./Components/Bestcakes";
 import Trendingcake from "./Components/Trendingcake";
@@ -36,6 +36,7 @@ import Kitkat from "./Components/Cakes/Kitkat";
 import Weaccept from "./Components/Weaccept";
 import Register from "./Components/Register";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useGlobalContext } from "./Components/Search/Context";
 function App() {
   return (
     <>
@@ -49,7 +50,7 @@ function App() {
           <Route path="/Trendingcake" element={<Trendingcake />} />
           <Route path="/Review" element={<Review />} />
           <Route path="/Joinus" element={<Joinus />} />
-          <Route path="/Weaccept" element={<Weaccept />}/>
+          <Route path="/Weaccept" element={<Weaccept />} />
           <Route path="/Timeline" element={<Timeline />} />
           <Route path="/Cakes" element={<Cakes />} />
           <Route path="/About" element={<About />} />
@@ -72,7 +73,7 @@ function App() {
           <Route path="/Almond" element={<Almond />} />
           <Route path="/Makeuptheme" element={<Makeuptheme />} />
           <Route path="/Strawberry" element={<Strawberry />} />
-          <Route path="/Oreocheese" element={<Oreocheese/>} />
+          <Route path="/Oreocheese" element={<Oreocheese />} />
           <Route path="/Mini" element={<Mini />} />
           <Route path="/Blueberry" element={<Blueberry />} />
           <Route path="/Kitkat" element={<Kitkat />} />

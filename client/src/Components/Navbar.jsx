@@ -29,16 +29,16 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between bg-[#F4BBC9] px-10 h-16 text-white sticky top-0 z-20 font-poppins">
+      <nav className="flex justify-between bg-[#F4BBC9] px-10 h-14 text-white sticky top-0 z-20 font-poppins">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="title size-10 m-4 font-bold">
             <img
-              className="w-[60px] h-[50px] left-[115px] top-[5px] absolute"
+              className="w-[60px] h-[45px] left-[115px] top-[5px] absolute"
               src={logo}
               alt="Logo"
             />
           </Link>
-          <div className="w-[120px] h-[84px] left-[215px] top-[5px] absolute text-[#733D26] text-xl font-bold font-poppins">
+          <div className="w-[100px] h-[40px] left-[215px] top-[0px] absolute text-[#733D26] text-xl font-bold font-poppins">
             USA
             <br />
             CAKES
@@ -47,28 +47,28 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-2">
             <Link
               to="/Homepage"
-              className="list-none w-[71px] h-[29px] left-[389px] top-[25px] absolute text-[#733D26] text-xl font-bold font-poppins"
+              className="list-none w-[71px] h-[29px] left-[389px] top-[15px] absolute text-[#733D26] text-xl font-bold font-poppins"
               onClick={closeMenu}
             >
               Home
             </Link>
             <Link
               to="/Cakes"
-              className="list-none w-[71px] h-[29px] left-[537px] top-[25px] absolute text-[#733D26] text-xl font-bold font-poppins"
+              className="list-none w-[71px] h-[29px] left-[537px] top-[15px] absolute text-[#733D26] text-xl font-bold font-poppins"
               onClick={closeMenu}
             >
               Cakes
             </Link>
 
             <div
-              className="cursor-pointer w-[124px] h-[29px] left-[737px] top-[25px] absolute text-[#733D26] text-xl font-bold font-poppins"
+              className="cursor-pointer w-[124px] h-[29px] left-[737px] top-[15px] absolute text-[#733D26] text-xl font-bold font-poppins"
               onClick={toggleMenu}
             >
               Occasions
             </div>
 
             {isMenuOpen && (
-              <ul className="absolute left-[737px] top-[54px] bg-[#733D26] border border-[#381d12] rounded shadow-md">
+              <ul className="absolute left-[737px] top-[45px] bg-[#733D26] border border-[#381d12] rounded shadow-md">
                 {occasions.map((occasion) => (
                   <li
                     key={occasion}
@@ -171,12 +171,12 @@ const Navbar = () => {
           </div>
         )}
 
-        <div className="hidden md:flex items-center pt-2 ">
+        <div className="hidden md:flex items-center pt-0 ">
           <a className="mr-6 text-[#733D26] dark:text-neutral-200">
             <Link to="/AddCart">
               <svg
-                height="30px"
-                width="30px"
+                height="25px"
+                width="25px"
                 version="1.1"
                 id="_x32_"
                 xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ const Navbar = () => {
                   </g>{" "}
                 </g>
               </svg>
-              <p className="text-[#733D26] text-base font-bold font-poppins">
+              <p className="text-[#733D26] text-base font-bold font-poppins h-5">
                 CART
               </p>
             </Link>
@@ -221,7 +221,7 @@ const Navbar = () => {
           <a className="mr-6 text-[#733D26] dark:text-neutral-200">
             <Link to="/Login">
               <svg
-                className="w-[30px] h-[30px] top-[5px]"
+                className="w-[25px] h-[25px] top-[0px]"
                 fill="#733D26"
                 viewBox="0 0 36 36"
                 version="1.1"
@@ -257,7 +257,7 @@ const Navbar = () => {
                   ></rect>
                 </g>
               </svg>
-              <p className="text-[#733D26] text-base font-bold font-poppins">
+              <p className="text-[#733D26] text-base font-bold font-poppins h-5">
                 LOGIN
               </p>
             </Link>
